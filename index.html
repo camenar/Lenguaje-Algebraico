@@ -137,8 +137,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 /* ── TRANSICIÓN ── */
 .s-trans{background:var(--blue);align-items:center;justify-content:center}
 .trans-big{font-family:'DM Serif Display',serif;font-size:clamp(60px,10vw,110px);color:#fff;line-height:1;animation:fadeUp .6s both}
-.trans-sub{font-size:clamp(19px,2.1vw,24px);color:#A8C4E8;animation:fadeUp .6s .2s both}
-.trans-note{font-size:clamp(15px,1.6vw,18px);color:rgba(168,196,232,.6);font-style:italic;animation:fadeUp .6s .4s both}
+.trans-sub{font-size:clamp(22px,2.5vw,28px);color:#A8C4E8;animation:fadeUp .6s .2s both}
+.trans-note{font-size:clamp(21px,2.3vw,26px);color:#fff;font-style:italic;animation:fadeUp .6s .4s both}
 
 /* ── ACTIVIDAD INTERACTIVA — TRADUCTOR ── */
 .tr-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;align-items:start}
@@ -191,11 +191,11 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .meta-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;flex:1}
 .meta-l{display:flex;flex-direction:column;gap:16px}
 .meta-qbox{background:#E0F2F1;border:2.5px solid var(--teal);border-radius:14px;padding:22px 26px;display:flex;flex-direction:column;gap:10px}
-.meta-qlbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
-.meta-qtxt{font-family:'DM Serif Display',serif;font-size:clamp(17px,2vw,23px);color:var(--text);font-style:italic;line-height:1.55}
-.meta-cuad-t{font-size:clamp(15px,1.65vw,19px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
+.meta-qlbl{font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.meta-qtxt{font-family:'DM Serif Display',serif;font-size:clamp(20px,2.3vw,26px);color:var(--text);font-style:italic;line-height:1.55}
+.meta-cuad-t{font-size:clamp(17px,1.85vw,21px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
 .meta-cuad{display:flex;flex-direction:column;gap:10px}
-.meta-cuad-i{display:flex;align-items:flex-start;gap:14px;background:#fff;border-radius:10px;padding:13px 18px;border-left:4px solid var(--teal);font-size:clamp(15px,1.65vw,19px);color:var(--text);line-height:1.45}
+.meta-cuad-i{display:flex;align-items:flex-start;gap:14px;background:#fff;border-radius:10px;padding:13px 18px;border-left:4px solid var(--teal);font-size:clamp(17px,1.85vw,21px);color:var(--text);line-height:1.45}
 .meta-cuad-n{font-weight:700;color:var(--teal);flex-shrink:0;min-width:24px}
 .meta-r{display:flex;flex-direction:column;gap:14px}
 .meta-sema-t{font-size:clamp(15px,1.65vw,19px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
@@ -203,10 +203,10 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .meta-sema-i{display:flex;align-items:center;gap:16px;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 2px 8px rgba(0,0,0,.07);opacity:0;transform:translateX(16px);transition:opacity .5s,transform .5s}
 .meta-sema-i.vis{opacity:1;transform:none}
 .meta-sema-c{width:42px;height:42px;border-radius:50%;flex-shrink:0}
-.meta-sema-tx{font-size:clamp(15px,1.65vw,19px);color:var(--text);line-height:1.3}
-.meta-sema-tx strong{display:block;font-size:clamp(13px,1.4vw,15px);color:var(--text3);margin-top:2px;font-weight:500}
-.next-step{background:var(--green-soft);border:2px solid var(--green-week);border-radius:11px;padding:14px 18px;font-size:clamp(14px,1.5vw,17px);color:var(--text);line-height:1.5}
-.next-step-l{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-week);margin-bottom:6px}
+.meta-sema-tx{font-size:clamp(17px,1.85vw,21px);color:var(--text);line-height:1.3}
+.meta-sema-tx strong{display:block;font-size:clamp(15px,1.55vw,17px);color:var(--text3);margin-top:2px;font-weight:500}
+.next-step{background:var(--green-soft);border:2px solid var(--green-week);border-radius:11px;padding:14px 18px;font-size:clamp(16px,1.75vw,20px);color:var(--text);line-height:1.5}
+.next-step-l{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-week);margin-bottom:6px}
 
 /* NAV */
 #nav{position:fixed;bottom:20px;right:28px;display:flex;align-items:center;gap:12px;z-index:100}
@@ -601,33 +601,36 @@ SLIDES.push({bread:'Sesión 1 › Tú haces (10 min) › Consigna abierta',time:
   </div>
 </div>`});
 
-/* SLIDE 9 — TÚ HACES SOCIALIZACIÓN S1 */
+/* SLIDE 9 — TÚ HACES SOCIALIZACIÓN S1 (botones Ver solución) */
 SLIDES.push({bread:'Sesión 1 › Socialización del Tú haces',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Tú haces',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Revisemos los retos</div>
-  <div class="slide-instr">Comparte tu respuesta. Si difiere de la mía, explica por qué la tuya también puede ser válida.</div></div>
+  <div class="slide-instr">Comparte tu respuesta y presiona "Ver solución" para comprobar.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Nueve menos que el doble de un número</div></div>
-    <div class="soc-fml">\\(2x - 9\\)</div>
+    <div class="soc-fml" id="s9f1" style="display:none">\\(2x - 9\\)</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s9f1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">La mitad del resultado de sumar cinco a un número</div></div>
-    <div class="soc-fml">\\(\\dfrac{x+5}{2}\\)</div>
+    <div class="soc-fml" id="s9f2" style="display:none">\\(\\dfrac{x+5}{2}\\)</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s9f2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">El cuadrado de un número, más uno</div></div>
-    <div class="soc-fml">\\(x^2 + 1\\)</div>
+    <div class="soc-fml" id="s9f3" style="display:none">\\(x^2 + 1\\)</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s9f3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple);border-left-width:8px">
+  <div class="soc-card vis" style="border-left-color:var(--purple);border-left-width:8px">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">★</div><div class="soc-title" style="color:var(--purple)">Cinco veces la diferencia de un número y dos</div></div>
-    <div class="soc-fml">\\(5(x - 2)\\)</div>
+    <div class="soc-fml" id="s9f4" style="display:none">\\(5(x - 2)\\)</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s9f4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 10 — RÚBRICA S1 */
 SLIDES.push({bread:'Sesión 1 › Rúbrica formativa',time:'RÚBRICA · 5 min',fL:'Rúbrica — Sesión 1',
@@ -804,33 +807,36 @@ SLIDES.push({bread:'Sesión 2 › Hacemos (12 min) › Lee en voz alta',time:'HA
   </div>
 </div>`});
 
-/* SLIDE 17 — HACEMOS SOCIALIZACIÓN S2 */
+/* SLIDE 17 — HACEMOS SOCIALIZACIÓN S2 (botones Ver solución + letra grande) */
 SLIDES.push({bread:'Sesión 2 › Socialización del Hacemos',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Hacemos',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Comparemos las lecturas</div>
-  <div class="slide-instr">Existe más de una forma válida de leer. Discútelas con tu grupo.</div></div>
+  <div class="slide-instr">Lee la expresión y presiona "Ver solución" para comprobar cómo se dice en español.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">\\(x^2 - 5\\)</div></div>
-    <div class="soc-pista">"El cuadrado de un número, disminuido en cinco."</div>
+    <div class="soc-pista" id="s17f1" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El cuadrado de un número, disminuido en cinco."</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s17f1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">\\(\\dfrac{x}{4} + 1\\)</div></div>
-    <div class="soc-pista">"La cuarta parte de un número, aumentada en uno."</div>
+    <div class="soc-pista" id="s17f2" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La cuarta parte de un número, aumentada en uno."</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s17f2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">\\(2(x + 7)\\)</div></div>
-    <div class="soc-pista">"El doble de la suma entre un número y siete." (Atención al paréntesis)</div>
+    <div class="soc-pista" id="s17f3" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El doble de la suma entre un número y siete." (Atención al paréntesis)</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s17f3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple)">
+  <div class="soc-card vis" style="border-left-color:var(--purple)">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">4</div><div class="soc-title">\\(\\sqrt{x} + 3\\)</div></div>
-    <div class="soc-pista">"La raíz cuadrada de un número, más tres."</div>
+    <div class="soc-pista" id="s17f4" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La raíz cuadrada de un número, más tres."</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s17f4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 18 — TRANSICIÓN TÚ HACES S2 */
 SLIDES.push({cls:'s-trans',noH:true,noF:true,clicks:0,html:`
@@ -871,33 +877,36 @@ SLIDES.push({bread:'Sesión 2 › Tú haces (10 min) › Trabajo individual',tim
   </div>
 </div>`});
 
-/* SLIDE 20 — TÚ HACES SOCIALIZACIÓN S2 */
+/* SLIDE 20 — TÚ HACES SOCIALIZACIÓN S2 (botones Ver solución + letra grande) */
 SLIDES.push({bread:'Sesión 2 › Socialización del Tú haces',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Tú haces',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Comparemos las traducciones</div>
-  <div class="slide-instr">Si tu frase difiere de la mía, comprueba si reconstruye la misma expresión.</div></div>
+  <div class="slide-instr">Lee la expresión y presiona "Ver solución" para ver cómo se dice en español.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">\\(5x - 2\\)</div></div>
-    <div class="soc-pista">"El quíntuple de un número, disminuido en dos."</div>
+    <div class="soc-pista" id="s20f1" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El quíntuple de un número, disminuido en dos."</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s20f1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">\\(\\dfrac{x-1}{3}\\)</div></div>
-    <div class="soc-pista">"La tercera parte de la diferencia entre un número y uno."</div>
+    <div class="soc-pista" id="s20f2" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La tercera parte de la diferencia entre un número y uno."</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s20f2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">\\(x^2 + x\\)</div></div>
-    <div class="soc-pista">"El cuadrado de un número, más el mismo número."</div>
+    <div class="soc-pista" id="s20f3" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El cuadrado de un número, más el mismo número."</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s20f3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple);border-left-width:8px">
+  <div class="soc-card vis" style="border-left-color:var(--purple);border-left-width:8px">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">★</div><div class="soc-title" style="color:var(--purple)">\\(2x + 3y\\)</div></div>
-    <div class="soc-pista">"El doble de un número, más el triple de otro."</div>
+    <div class="soc-pista" id="s20f4" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El doble de un número, más el triple de otro."</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s20f4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 21 — CIERRE S2 */
 SLIDES.push({bread:'Sesión 2 › Metacognición (5 min)',time:'METACOGNICIÓN · 5 min',fL:'Cierre — Autoevaluación',
@@ -1054,33 +1063,36 @@ SLIDES.push({bread:'Sesión 3 › Hacemos (12 min) › Modelación de situacione
   </div>
 </div>`});
 
-/* SLIDE 27 — HACEMOS SOCIALIZACIÓN S3 */
+/* SLIDE 27 — HACEMOS SOCIALIZACIÓN S3 (botones Ver solución) */
 SLIDES.push({bread:'Sesión 3 › Socialización del Hacemos',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Hacemos',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Comparemos los modelos</div>
-  <div class="slide-instr">Cada grupo presenta su fórmula y justifica la elección de variables.</div></div>
+  <div class="slide-instr">Presenta tu fórmula y presiona "Ver solución" para comparar.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Cancha de fútbol</div></div>
-    <div class="soc-fml">\\(P = 4x\\)</div>
+    <div class="soc-fml" id="s27f1" style="display:none">\\(P = 4x\\)</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s27f1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">Plan celular</div></div>
-    <div class="soc-fml">\\(C(n) = 2{,}500\\,n + 8{,}000\\)</div>
+    <div class="soc-fml" id="s27f2" style="display:none">\\(C(n) = 2{,}500\\,n + 8{,}000\\)</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s27f2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">Edad del hermano</div></div>
-    <div class="soc-fml">\\(E = x + 3\\)</div>
+    <div class="soc-fml" id="s27f3" style="display:none">\\(E = x + 3\\)</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s27f3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple)">
+  <div class="soc-card vis" style="border-left-color:var(--purple)">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">4</div><div class="soc-title">Bus a Santa Elena</div></div>
-    <div class="soc-fml">\\(D = 60\\,t\\)</div>
+    <div class="soc-fml" id="s27f4" style="display:none">\\(D = 60\\,t\\)</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s27f4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 28 — TRANSICIÓN ACTIVIDAD INTERACTIVA */
 SLIDES.push({cls:'s-trans',noH:true,noF:true,clicks:0,html:`
@@ -1156,33 +1168,36 @@ SLIDES.push({bread:'Sesión 3 › Tú haces (10 min) › Modelación independien
   </div>
 </div>`});
 
-/* SLIDE 32 — TÚ HACES SOCIALIZACIÓN S3 */
+/* SLIDE 32 — TÚ HACES SOCIALIZACIÓN S3 (botones Ver solución) */
 SLIDES.push({bread:'Sesión 3 › Socialización del Tú haces',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Tú haces',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Revisemos los modelos finales</div>
-  <div class="slide-instr">Comparte tu fórmula y la verificación con un valor concreto.</div></div>
+  <div class="slide-instr">Comparte tu fórmula y presiona "Ver solución" para comparar.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Ahorro escolar</div></div>
-    <div class="soc-fml">\\(M = 1{,}200{,}000 - 35{,}000\\,s\\)</div>
+    <div class="soc-fml" id="s32f1" style="display:none">\\(M = 1{,}200{,}000 - 35{,}000\\,s\\)</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s32f1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">Patio rectangular</div></div>
-    <div class="soc-fml">\\(A = x \\, (x + 5)\\)</div>
+    <div class="soc-fml" id="s32f2" style="display:none">\\(A = x \\, (x + 5)\\)</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s32f2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">Recibo EPM</div></div>
-    <div class="soc-fml">\\(T(k) = 12{,}000 + 850\\,k\\)</div>
+    <div class="soc-fml" id="s32f3" style="display:none">\\(T(k) = 12{,}000 + 850\\,k\\)</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s32f3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple);border-left-width:8px">
+  <div class="soc-card vis" style="border-left-color:var(--purple);border-left-width:8px">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">★</div><div class="soc-title" style="color:var(--purple)">Buseta a Santa Elena</div></div>
-    <div class="soc-fml">\\(G(d) = 6{,}400 \\, d\\)</div>
+    <div class="soc-fml" id="s32f4" style="display:none">\\(G(d) = 6{,}400 \\, d\\)</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s32f4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 33 — CIERRE S3 */
 SLIDES.push({bread:'Sesión 3 › Metacognición · Cierre de semana',time:'METACOGNICIÓN · 5 min',fL:'Cierre — Semana 1 P2',
@@ -1314,7 +1329,8 @@ function toggleSol(id, btn){
   const el = document.getElementById(id);
   if(!el) return;
   const show = el.style.display === 'none' || el.style.display === '';
-  el.style.display = show ? 'flex' : 'none';
+  const isFml = el.classList.contains('soc-fml');
+  el.style.display = show ? (isFml ? 'flex' : 'block') : 'none';
   btn.textContent = show ? 'Ocultar' : 'Ver solución';
   btn.classList.toggle('shown', show);
   if(show && window.katex) doKatex(el.closest('.slide') || el.parentElement);
