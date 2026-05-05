@@ -111,17 +111,17 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .yo-step-mid{display:flex;flex-direction:column;gap:5px}
 .yo-step-lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7FCB85}
 .yo-step-desc{font-size:clamp(14px,1.55vw,17px);color:#fff;line-height:1.4}
-.yo-step-fml{background:rgba(255,255,255,.08);border:1px solid rgba(168,196,232,.25);border-radius:10px;padding:14px;text-align:center;min-height:60px;display:flex;align-items:center;justify-content:center}
+.yo-step-fml{background:rgba(255,255,255,.08);border:1px solid rgba(168,196,232,.25);border-radius:10px;padding:14px;text-align:center;min-height:60px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(15px,1.6vw,18px)}
 .yo-step-fml .katex{color:#fff!important;font-size:1.6em!important}
 
 /* ── HACEMOS / TÚ HACES — CONSIGNAS ── */
 .cons-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
 .cons-card{background:#fff;border-radius:12px;border:1px solid var(--border);border-left:7px solid var(--blue-mid);padding:20px;display:flex;flex-direction:column;gap:12px}
 .cons-head{display:flex;align-items:center;gap:13px}
-.cons-n{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff}
-.cons-title{font-size:clamp(16px,1.75vw,20px);font-weight:700;color:var(--text)}
-.cons-pista{font-size:clamp(15px,1.65vw,19px);color:var(--text2);font-style:italic;line-height:1.5;flex:1}
-.cons-task{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;font-size:clamp(13px,1.45vw,16px);font-weight:600;color:var(--blue-mid);letter-spacing:.04em}
+.cons-n{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff}
+.cons-title{font-size:clamp(19px,2vw,23px);font-weight:700;color:var(--text)}
+.cons-pista{font-size:clamp(18px,1.9vw,22px);color:var(--text2);font-style:italic;line-height:1.5;flex:1}
+.cons-task{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;font-size:clamp(15px,1.65vw,19px);font-weight:600;color:var(--blue-mid);letter-spacing:.04em}
 
 /* ── SOCIALIZACIÓN ── */
 .soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
@@ -215,6 +215,9 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 #ncnt{font-size:13px;color:rgba(255,255,255,.8);background:rgba(15,32,64,.7);padding:5px 13px;border-radius:20px;font-family:monospace}
 #pbar{position:fixed;bottom:0;left:0;height:4px;background:var(--green-week);transition:width .35s ease;z-index:100}
 #hint{position:fixed;bottom:20px;left:28px;font-size:12px;color:rgba(255,255,255,.45);background:rgba(15,32,64,.6);padding:5px 13px;border-radius:20px;font-family:monospace;transition:opacity .3s}
+.sol-btn{background:#fff;border:2px solid currentColor;border-radius:8px;padding:8px 18px;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:background .25s,opacity .25s;align-self:flex-start;margin-top:4px}
+.sol-btn:hover{background:var(--warm)}
+.sol-btn.shown{opacity:.55}
 </style>
 </head>
 <body>
@@ -528,33 +531,36 @@ SLIDES.push({bread:'Sesión 1 › Hacemos (12 min) › Consigna abierta',time:'H
   </div>
 </div>`});
 
-/* SLIDE 6 — HACEMOS SOCIALIZACIÓN S1 */
+/* SLIDE 6 — HACEMOS SOCIALIZACIÓN S1 (con botones Ver solución integrados) */
 SLIDES.push({bread:'Sesión 1 › Socialización del Hacemos',time:'SOCIALIZACIÓN · 5 min',fL:'Socialización — Hacemos',
-clicks:4,html:`
+clicks:0,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
   <div><div class="slide-title">Comparemos las respuestas</div>
-  <div class="slide-instr">Cada tarjeta se revela tras la discusión grupal. ¿Llegaste a la misma expresión?</div></div>
+  <div class="slide-instr">Traduce cada frase en tu cuaderno y luego presiona "Ver solución" para comprobar.</div></div>
 </div>
 <div class="soc-grid">
-  <div class="soc-card" data-c="1" style="border-left-color:var(--blue-mid)">
+  <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
     <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Un número disminuido en siete</div></div>
-    <div class="soc-fml">\\(x - 7\\)</div>
+    <div class="soc-fml" id="sf1" style="display:none">\\(x - 7\\)</div>
+    <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('sf1',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="2" style="border-left-color:var(--teal)">
+  <div class="soc-card vis" style="border-left-color:var(--teal)">
     <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">La tercera parte de un número</div></div>
-    <div class="soc-fml">\\(\\dfrac{x}{3}\\)</div>
+    <div class="soc-fml" id="sf2" style="display:none">\\(\\dfrac{x}{3}\\)</div>
+    <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('sf2',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="3" style="border-left-color:var(--amber)">
+  <div class="soc-card vis" style="border-left-color:var(--amber)">
     <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">Cuatro más que un número</div></div>
-    <div class="soc-fml">\\(x + 4\\)</div>
+    <div class="soc-fml" id="sf3" style="display:none">\\(x + 4\\)</div>
+    <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('sf3',this)">Ver solución</button>
   </div>
-  <div class="soc-card" data-c="4" style="border-left-color:var(--purple)">
+  <div class="soc-card vis" style="border-left-color:var(--purple)">
     <div class="soc-head"><div class="soc-n" style="background:var(--purple)">4</div><div class="soc-title">El triple de un número</div></div>
-    <div class="soc-fml">\\(3x\\)</div>
+    <div class="soc-fml" id="sf4" style="display:none">\\(3x\\)</div>
+    <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('sf4',this)">Ver solución</button>
   </div>
-</div>`,
-onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
+</div>`});
 
 /* SLIDE 7 — TRANSICIÓN TÚ HACES S1 */
 SLIDES.push({cls:'s-trans',noH:true,noF:true,clicks:0,html:`
@@ -1303,6 +1309,16 @@ document.addEventListener('katex-ready', ()=>{
   const a = deck.querySelector('.slide.active');
   if(a) doKatex(a);
 });
+
+function toggleSol(id, btn){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const show = el.style.display === 'none' || el.style.display === '';
+  el.style.display = show ? 'flex' : 'none';
+  btn.textContent = show ? 'Ocultar' : 'Ver solución';
+  btn.classList.toggle('shown', show);
+  if(show && window.katex) doKatex(el.closest('.slide') || el.parentElement);
+}
 
 show(0, 1);
 </script>
