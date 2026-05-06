@@ -45,8 +45,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .body{flex:1;overflow:hidden;padding:26px 38px 18px;display:flex;flex-direction:column;gap:16px}
 
 /* TYPOGRAPHY */
-.slide-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);color:var(--text);line-height:1.15}
-.slide-instr{font-size:clamp(16px,1.8vw,20px);color:var(--text2);font-style:italic;margin-top:5px}
+.slide-title{font-family:'DM Serif Display',serif;font-size:clamp(34px,4.2vw,52px);color:var(--text);line-height:1.15}
+.slide-instr{font-size:clamp(20px,2.1vw,26px);color:var(--text2);font-style:italic;margin-top:5px}
 .title-row{display:flex;align-items:flex-start;gap:14px}
 .accent{width:8px;border-radius:4px;flex-shrink:0;margin-top:5px}
 
@@ -81,21 +81,22 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .pan-n{font-family:'DM Serif Display',serif;font-size:140px;line-height:1;color:#fff}
 .pan-l{font-size:18px;font-weight:700;letter-spacing:.2em;color:#A8C4E8;text-transform:uppercase}
 .sess-content{flex:1;padding:38px 44px;display:flex;flex-direction:column;gap:18px;overflow:hidden;justify-content:center}
-.sess-eyebrow{font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green-week)}
-.sess-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw,52px);color:var(--text);line-height:1.1}
-.sess-desc{font-size:clamp(16px,1.8vw,21px);color:var(--text2);line-height:1.55;max-width:780px}
+/* PORTADA SESIÓN */
+.sess-eyebrow{font-size:16px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green-week)}
+.sess-title{font-family:'DM Serif Display',serif;font-size:clamp(44px,5.5vw,68px);color:var(--text);line-height:1.1}
+.sess-desc{font-size:clamp(22px,2.4vw,28px);color:var(--text2);line-height:1.55;max-width:780px}
 .sess-meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
-.sess-chip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:11px 18px;font-size:clamp(14px,1.5vw,17px);color:var(--text);display:flex;align-items:center;gap:10px}
+.sess-chip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:13px 20px;font-size:clamp(18px,1.9vw,22px);color:var(--text);display:flex;align-items:center;gap:10px}
 .sess-chip strong{color:var(--green-week)}
 
 /* ── DETONANTE ── */
 .det-box{background:#FFF8F0;border:2.5px solid var(--amber);border-radius:14px;padding:24px 30px;flex:1;display:flex;flex-direction:column;gap:14px}
-.det-label{font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber)}
-.det-text{font-family:'DM Serif Display',serif;font-size:clamp(19px,2.1vw,26px);color:var(--text);line-height:1.55;font-style:italic}
+.det-label{font-size:15px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber)}
+.det-text{font-family:'DM Serif Display',serif;font-size:clamp(24px,2.6vw,32px);color:var(--text);line-height:1.55;font-style:italic}
 .det-text strong{font-style:normal;color:var(--amber)}
-.det-q-box{background:var(--green-soft);border:2px solid var(--green-week);border-radius:12px;padding:18px 24px;margin-top:auto}
-.det-q-lbl{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-week);margin-bottom:8px}
-.det-q-txt{font-family:'DM Serif Display',serif;font-size:clamp(18px,2vw,24px);color:var(--text);font-style:italic;line-height:1.45}
+.det-q-box{background:var(--green-soft);border:2px solid var(--green-week);border-radius:12px;padding:20px 28px;margin-top:auto}
+.det-q-lbl{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-week);margin-bottom:10px}
+.det-q-txt{font-family:'DM Serif Display',serif;font-size:clamp(22px,2.4vw,30px);color:var(--text);font-style:italic;line-height:1.45}
 
 /* ── YO HAGO — pasos animados ── */
 .s-yo{background:var(--navy)}
@@ -105,40 +106,43 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .s-yo .slide-title{color:#fff}
 .s-yo .slide-instr{color:#A8C4E8}
 .yo-steps{display:flex;flex-direction:column;gap:10px;flex:1}
-.yo-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:50px 1fr 1.2fr;gap:18px;align-items:center;opacity:0;transform:translateX(20px);transition:opacity .5s,transform .5s}
+.yo-step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 22px;display:grid;grid-template-columns:60px 1fr 1.2fr;gap:18px;align-items:center;opacity:0;transform:translateX(20px);transition:opacity .5s,transform .5s;flex:1}
 .yo-step.vis{opacity:1;transform:none}
-.yo-step-n{width:42px;height:42px;border-radius:50%;background:var(--green-week);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
-.yo-step-mid{display:flex;flex-direction:column;gap:5px}
-.yo-step-lbl{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7FCB85}
-.yo-step-desc{font-size:clamp(14px,1.55vw,17px);color:#fff;line-height:1.4}
-.yo-step-fml{background:rgba(255,255,255,.08);border:1px solid rgba(168,196,232,.25);border-radius:10px;padding:14px;text-align:center;min-height:60px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(15px,1.6vw,18px)}
-.yo-step-fml .katex{color:#fff!important;font-size:1.6em!important}
+.yo-step-n{width:52px;height:52px;border-radius:50%;background:var(--green-week);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px}
+.yo-step-mid{display:flex;flex-direction:column;gap:6px}
+.yo-step-lbl{font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7FCB85}
+.yo-step-desc{font-size:clamp(20px,2.2vw,26px);color:#fff;line-height:1.4}
+.yo-step-fml{background:rgba(255,255,255,.08);border:1px solid rgba(168,196,232,.25);border-radius:10px;padding:14px;text-align:center;min-height:60px;display:flex;align-items:center;justify-content:center;color:#fff!important;font-size:clamp(22px,2.5vw,32px)}
+.yo-step-fml .katex{color:#fff!important;font-size:1.8em!important}
+.yo-step-fml .katex * {color:#fff!important}
+.s-yo .yo-step-fml{color:#fff!important}
 
 /* ── HACEMOS / TÚ HACES — CONSIGNAS ── */
 .cons-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
-.cons-card{background:#fff;border-radius:12px;border:1px solid var(--border);border-left:7px solid var(--blue-mid);padding:20px;display:flex;flex-direction:column;gap:12px}
-.cons-head{display:flex;align-items:center;gap:13px}
-.cons-n{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff}
-.cons-title{font-size:clamp(19px,2vw,23px);font-weight:700;color:var(--text)}
-.cons-pista{font-size:clamp(18px,1.9vw,22px);color:var(--text2);font-style:italic;line-height:1.5;flex:1}
-.cons-task{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;font-size:clamp(15px,1.65vw,19px);font-weight:600;color:var(--blue-mid);letter-spacing:.04em}
+.cons-card{background:#fff;border-radius:12px;border:1px solid var(--border);border-left:7px solid var(--blue-mid);padding:24px;display:flex;flex-direction:column;gap:14px}
+.cons-head{display:flex;align-items:center;gap:14px}
+.cons-n{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff}
+.cons-title{font-size:clamp(24px,2.6vw,32px);font-weight:700;color:var(--text)}
+.cons-pista{font-size:clamp(25px,2.7vw,34px);color:var(--text2);font-style:italic;line-height:1.5;flex:1}
+.cons-task{background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:12px 16px;text-align:center;font-size:clamp(20px,2.1vw,26px);font-weight:600;color:var(--blue-mid);letter-spacing:.04em}
 
 /* ── SOCIALIZACIÓN ── */
 .soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
-.soc-card{background:#fff;border-radius:12px;border:1px solid var(--border);border-left:7px solid var(--blue-mid);padding:18px;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(14px);transition:opacity .45s,transform .45s}
+.soc-card{background:#fff;border-radius:12px;border:1px solid var(--border);border-left:7px solid var(--blue-mid);padding:22px;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(14px);transition:opacity .45s,transform .45s}
 .soc-card.vis{opacity:1;transform:none}
-.soc-head{display:flex;align-items:center;gap:12px}
-.soc-n{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff}
-.soc-title{font-size:clamp(15px,1.65vw,19px);font-weight:700;color:var(--text)}
-.soc-pista{font-size:clamp(13px,1.45vw,16px);color:var(--text2);font-style:italic;line-height:1.4}
-.soc-fml{background:var(--warm);border:1.5px solid var(--blue-mid);border-radius:10px;padding:12px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:60px}
-.soc-fml .katex{font-size:1.85em!important}
+.soc-head{display:flex;align-items:center;gap:14px}
+.soc-n{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px;color:#fff}
+.soc-title{font-size:clamp(22px,2.3vw,28px);font-weight:700;color:var(--text)}
+.soc-pista{font-size:clamp(18px,1.9vw,22px);color:var(--text2);font-style:italic;line-height:1.4}
+.soc-fml{background:var(--warm);border:1.5px solid var(--blue-mid);border-radius:10px;padding:16px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;font-size:72px}
+.soc-fml .katex{font-size:1em}
+.soc-fml .katex-display{margin:0!important}
 
 /* ── TRANSICIÓN ── */
 .s-trans{background:var(--blue);align-items:center;justify-content:center}
-.trans-big{font-family:'DM Serif Display',serif;font-size:clamp(60px,10vw,110px);color:#fff;line-height:1;animation:fadeUp .6s both}
-.trans-sub{font-size:clamp(22px,2.5vw,28px);color:#A8C4E8;animation:fadeUp .6s .2s both}
-.trans-note{font-size:clamp(21px,2.3vw,26px);color:#fff;font-style:italic;animation:fadeUp .6s .4s both}
+.trans-big{font-family:'DM Serif Display',serif;font-size:clamp(80px,13vw,140px);color:#fff;line-height:1;animation:fadeUp .6s both}
+.trans-sub{font-size:clamp(30px,3.2vw,40px);color:#A8C4E8;animation:fadeUp .6s .2s both}
+.trans-note{font-size:clamp(26px,2.8vw,34px);color:#fff;font-style:italic;animation:fadeUp .6s .4s both}
 
 /* ── ACTIVIDAD INTERACTIVA — TRADUCTOR ── */
 .tr-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;align-items:start}
@@ -178,12 +182,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .tr-restart:hover{background:var(--blue)}
 
 /* ── RÚBRICA ── */
-.rub-table{width:100%;border-collapse:collapse;font-size:clamp(14px,1.5vw,17px)}
-.rub-table th{background:var(--navy);color:#fff;padding:12px 14px;text-align:left;font-size:clamp(13px,1.4vw,16px);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.rub-table td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.45;color:var(--text);font-size:clamp(13px,1.45vw,16px)}
+.rub-table{width:100%;border-collapse:collapse;font-size:clamp(16px,1.7vw,20px)}
+.rub-table th{background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-size:clamp(15px,1.6vw,19px);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.rub-table td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.45;color:var(--text);font-size:clamp(16px,1.7vw,20px)}
 .rub-table tr:nth-child(even) td{background:var(--warm)}
 .rub-table tr:nth-child(odd) td{background:#fff}
-.rub-table td:first-child{font-weight:700;color:var(--blue);background:#EBF4FB!important;border-right:2px solid var(--blue-mid);font-size:clamp(14px,1.5vw,17px)}
+.rub-table td:first-child{font-weight:700;color:var(--blue);background:#EBF4FB!important;border-right:2px solid var(--blue-mid);font-size:clamp(17px,1.8vw,21px)}
 .rub-table tbody tr{opacity:0;transform:translateX(-10px);transition:opacity .4s,transform .4s}
 .rub-table tbody tr.vis{opacity:1;transform:none}
 
@@ -191,22 +195,22 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
 .meta-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;flex:1}
 .meta-l{display:flex;flex-direction:column;gap:16px}
 .meta-qbox{background:#E0F2F1;border:2.5px solid var(--teal);border-radius:14px;padding:22px 26px;display:flex;flex-direction:column;gap:10px}
-.meta-qlbl{font-size:15px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
-.meta-qtxt{font-family:'DM Serif Display',serif;font-size:clamp(20px,2.3vw,26px);color:var(--text);font-style:italic;line-height:1.55}
-.meta-cuad-t{font-size:clamp(17px,1.85vw,21px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
+.meta-qlbl{font-size:18px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.meta-qtxt{font-family:'DM Serif Display',serif;font-size:clamp(26px,2.8vw,34px);color:var(--text);font-style:italic;line-height:1.55}
+.meta-cuad-t{font-size:clamp(20px,2.1vw,25px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
 .meta-cuad{display:flex;flex-direction:column;gap:10px}
-.meta-cuad-i{display:flex;align-items:flex-start;gap:14px;background:#fff;border-radius:10px;padding:13px 18px;border-left:4px solid var(--teal);font-size:clamp(17px,1.85vw,21px);color:var(--text);line-height:1.45}
-.meta-cuad-n{font-weight:700;color:var(--teal);flex-shrink:0;min-width:24px}
+.meta-cuad-i{display:flex;align-items:flex-start;gap:14px;background:#fff;border-radius:10px;padding:15px 20px;border-left:4px solid var(--teal);font-size:clamp(22px,2.3vw,28px);color:var(--text);line-height:1.45}
+.meta-cuad-n{font-weight:700;color:var(--teal);flex-shrink:0;min-width:28px}
 .meta-r{display:flex;flex-direction:column;gap:14px}
-.meta-sema-t{font-size:clamp(15px,1.65vw,19px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
+.meta-sema-t{font-size:clamp(17px,1.8vw,21px);font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.1em}
 .meta-sema{display:flex;flex-direction:column;gap:12px}
-.meta-sema-i{display:flex;align-items:center;gap:16px;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 2px 8px rgba(0,0,0,.07);opacity:0;transform:translateX(16px);transition:opacity .5s,transform .5s}
+.meta-sema-i{display:flex;align-items:center;gap:18px;background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.07);opacity:0;transform:translateX(16px);transition:opacity .5s,transform .5s}
 .meta-sema-i.vis{opacity:1;transform:none}
-.meta-sema-c{width:42px;height:42px;border-radius:50%;flex-shrink:0}
-.meta-sema-tx{font-size:clamp(17px,1.85vw,21px);color:var(--text);line-height:1.3}
-.meta-sema-tx strong{display:block;font-size:clamp(15px,1.55vw,17px);color:var(--text3);margin-top:2px;font-weight:500}
-.next-step{background:var(--green-soft);border:2px solid var(--green-week);border-radius:11px;padding:14px 18px;font-size:clamp(16px,1.75vw,20px);color:var(--text);line-height:1.5}
-.next-step-l{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-week);margin-bottom:6px}
+.meta-sema-c{width:46px;height:46px;border-radius:50%;flex-shrink:0}
+.meta-sema-tx{font-size:clamp(22px,2.3vw,28px);color:var(--text);line-height:1.3}
+.meta-sema-tx strong{display:block;font-size:clamp(18px,1.9vw,22px);color:var(--text3);margin-top:2px;font-weight:500}
+.next-step{background:var(--green-soft);border:2px solid var(--green-week);border-radius:11px;padding:16px 20px;font-size:clamp(20px,2.1vw,26px);color:var(--text);line-height:1.5}
+.next-step-l{font-size:16px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-week);margin-bottom:8px}
 
 /* NAV */
 #nav{position:fixed;bottom:20px;right:28px;display:flex;align-items:center;gap:12px;z-index:100}
@@ -228,7 +232,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#111;font-family:'DM
   <button class="nbtn" id="bn">&#8594;</button>
 </div>
 <div id="pbar"></div>
-<div id="hint">Espacio / → avanzar &nbsp;|&nbsp; ← retroceder</div>
+<div id="hint">Espacio / → avanzar &nbsp;|&nbsp; ← retroceder &nbsp;|&nbsp; F pantalla completa</div>
 
 <script>
 /* ============================================================
@@ -453,41 +457,41 @@ SLIDES.push({cls:'s-yo',bread:'Sesión 1 › Yo hago (10 min) › Cómo traducir
 clicks:4,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
-  <div><div class="slide-title">Cómo traducir del español al álgebra</div>
-  <div class="slide-instr">Observa cómo descompongo la frase paso a paso. Cada paso aparecerá con un clic.</div></div>
+  <div><div class="slide-title">Resolvamos la situación de doña Luz</div>
+  <div class="slide-instr">Observa cómo traduzco la frase paso a paso. Cada paso aparece con un clic.</div></div>
 </div>
 <div class="yo-steps">
   <div class="yo-step" data-c="1">
     <div class="yo-step-n">1</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 1 · LEO</div>
-      <div class="yo-step-desc">Identifico la frase original y subrayo las palabras clave.</div>
+      <div class="yo-step-desc">Identifico lo que <em>cambia</em>: el número de empanadas vendidas. No lo sé todavía — lo llamo <em>n</em>.</div>
     </div>
-    <div class="yo-step-fml">"el doble de un número"</div>
+    <div class="yo-step-fml">"Lo que venda" → \\(n\\)</div>
   </div>
   <div class="yo-step" data-c="2">
     <div class="yo-step-n">2</div>
     <div class="yo-step-mid">
-      <div class="yo-step-lbl">PASO 2 · ASIGNO</div>
-      <div class="yo-step-desc">Llamo \\(x\\) al número desconocido y escribo el doble.</div>
+      <div class="yo-step-lbl">PASO 2 · TRADUZCO</div>
+      <div class="yo-step-desc">"Multiplicado por $1.500" es el precio por empanada. Cada empanada vale $1.500, así que el total de ventas es:</div>
     </div>
-    <div class="yo-step-fml">\\(2x\\)</div>
+    <div class="yo-step-fml">\\(1500 \\cdot n\\)</div>
   </div>
   <div class="yo-step" data-c="3">
     <div class="yo-step-n">3</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 3 · COMPLETO</div>
-      <div class="yo-step-desc">Agrego la segunda parte de la frase: "más cinco".</div>
+      <div class="yo-step-desc">"Más los $2.000 del mecato fijo de Don Aníbal" es una cantidad que siempre se suma, sin importar cuánto venda.</div>
     </div>
-    <div class="yo-step-fml">"el doble de un número, más cinco"</div>
+    <div class="yo-step-fml">\\(1500n + 2000\\)</div>
   </div>
   <div class="yo-step" data-c="4">
     <div class="yo-step-n">4</div>
     <div class="yo-step-mid">
-      <div class="yo-step-lbl">PASO 4 · ESCRIBO</div>
-      <div class="yo-step-desc">Obtengo la expresión algebraica completa y final.</div>
+      <div class="yo-step-lbl">PASO 4 · VERIFICO</div>
+      <div class="yo-step-desc">Si doña Luz vende 10 empanadas: \\(1500(10)+2000 = 17.000\\). ¡La expresión funciona para cualquier valor de \\(n\\)!</div>
     </div>
-    <div class="yo-step-fml">\\(2x + 5\\)</div>
+    <div class="yo-step-fml">\\(R(n) = 1500n + 2000\\)</div>
   </div>
 </div>`,
 onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
@@ -729,41 +733,41 @@ SLIDES.push({cls:'s-yo',bread:'Sesión 2 › Yo hago (10 min) › Cómo leer una
 clicks:4,html:`
 <div class="title-row">
   <div class="accent" style="background:var(--green-week);height:58px"></div>
-  <div><div class="slide-title">Cómo leer una expresión algebraica</div>
-  <div class="slide-instr">Voy a leer la expresión \\(3x + 2\\) en voz alta. Cada parte aparecerá con un clic.</div></div>
+  <div><div class="slide-title">Leamos \\(2x - 5000\\) como Valentina</div>
+  <div class="slide-instr">Voy a leer la expresión del Éxito paso a paso. Cada parte aparece con un clic.</div></div>
 </div>
 <div class="yo-steps">
   <div class="yo-step" data-c="1">
     <div class="yo-step-n">1</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 1 · MIRO</div>
-      <div class="yo-step-desc">Observo la expresión completa antes de hablar.</div>
+      <div class="yo-step-desc">Observo la expresión completa antes de hablar. Identifico cuántos términos tiene y qué operación los une.</div>
     </div>
-    <div class="yo-step-fml">\\(3x + 2\\)</div>
+    <div class="yo-step-fml">\\(2x - 5000\\)</div>
   </div>
   <div class="yo-step" data-c="2">
     <div class="yo-step-n">2</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 2 · NOMBRO</div>
-      <div class="yo-step-desc">Identifico el coeficiente y la variable: tres veces \\(x\\).</div>
+      <div class="yo-step-desc">El primer término: coeficiente 2, variable \\(x\\). Lo leo como <em>"el doble de un número"</em> o <em>"dos veces x"</em>.</div>
     </div>
-    <div class="yo-step-fml" style="background:rgba(28,58,110,.5)">\\(3x\\)</div>
+    <div class="yo-step-fml" style="background:rgba(28,58,110,.5)">\\(2x\\)</div>
   </div>
   <div class="yo-step" data-c="3">
     <div class="yo-step-n">3</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 3 · CONECTO</div>
-      <div class="yo-step-desc">Veo el operador y el término independiente: <em>más dos</em>.</div>
+      <div class="yo-step-desc">El operador "−" significa <em>menos</em> o <em>disminuido en</em>. El término independiente 5000 es fijo: <em>"menos cinco mil"</em>.</div>
     </div>
-    <div class="yo-step-fml" style="background:rgba(196,124,26,.3)">\\(+\\,2\\)</div>
+    <div class="yo-step-fml" style="background:rgba(184,50,50,.35)">\\(-\\,5000\\)</div>
   </div>
   <div class="yo-step" data-c="4">
     <div class="yo-step-n">4</div>
     <div class="yo-step-mid">
       <div class="yo-step-lbl">PASO 4 · LEO</div>
-      <div class="yo-step-desc">"El triple de un número, aumentado en dos."</div>
+      <div class="yo-step-desc">Junto todo: <em>"el doble del total de productos, menos cinco mil pesos"</em>. ¡Exacto lo que decía el aviso del Éxito!</div>
     </div>
-    <div class="yo-step-fml">\\(3x + 2\\)</div>
+    <div class="yo-step-fml">\\(2x - 5000\\)</div>
   </div>
 </div>`,
 onReveal:n=>document.querySelectorAll(`[data-c="${n}"]`).forEach(e=>e.classList.add('vis'))});
@@ -817,23 +821,27 @@ clicks:0,html:`
 </div>
 <div class="soc-grid">
   <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">\\(x^2 - 5\\)</div></div>
-    <div class="soc-pista" id="s17f1" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El cuadrado de un número, disminuido en cinco."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Tarjeta 1</div></div>
+    <div class="soc-fml">\\(x^2 - 5\\)</div>
+    <div class="soc-pista" id="s17f1" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"El cuadrado de un número, disminuido en cinco."</div>
     <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s17f1',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--teal)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">\\(\\dfrac{x}{4} + 1\\)</div></div>
-    <div class="soc-pista" id="s17f2" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La cuarta parte de un número, aumentada en uno."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">Tarjeta 2</div></div>
+    <div class="soc-fml">\\(\\dfrac{x}{4} + 1\\)</div>
+    <div class="soc-pista" id="s17f2" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"La cuarta parte de un número, aumentada en uno."</div>
     <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s17f2',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--amber)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">\\(2(x + 7)\\)</div></div>
-    <div class="soc-pista" id="s17f3" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El doble de la suma entre un número y siete." (Atención al paréntesis)</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">Tarjeta 3</div></div>
+    <div class="soc-fml">\\(2(x + 7)\\)</div>
+    <div class="soc-pista" id="s17f3" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"El doble de la suma entre un número y siete." (Atención al paréntesis)</div>
     <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s17f3',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--purple)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--purple)">4</div><div class="soc-title">\\(\\sqrt{x} + 3\\)</div></div>
-    <div class="soc-pista" id="s17f4" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La raíz cuadrada de un número, más tres."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--purple)">4</div><div class="soc-title">Tarjeta 4</div></div>
+    <div class="soc-fml">\\(\\sqrt{x} + 3\\)</div>
+    <div class="soc-pista" id="s17f4" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"La raíz cuadrada de un número, más tres."</div>
     <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s17f4',this)">Ver solución</button>
   </div>
 </div>`});
@@ -857,22 +865,22 @@ SLIDES.push({bread:'Sesión 2 › Tú haces (10 min) › Trabajo individual',tim
 <div class="cons-grid">
   <div class="cons-card" style="border-left-color:var(--blue-mid)">
     <div class="cons-head"><div class="cons-n" style="background:var(--blue-mid)">1</div><div class="cons-title">Reto 1</div></div>
-    <div class="cons-pista" style="text-align:center;font-size:clamp(20px,2.4vw,28px);font-style:normal;padding:20px 0">\\(5x - 2\\)</div>
+    <div class="cons-pista" style="text-align:center;font-size:clamp(28px,3.2vw,42px);font-style:normal;padding:20px 0">\\(5x - 2\\)</div>
     <div class="cons-task">✏ Escribe la frase en tu cuaderno</div>
   </div>
   <div class="cons-card" style="border-left-color:var(--teal)">
     <div class="cons-head"><div class="cons-n" style="background:var(--teal)">2</div><div class="cons-title">Reto 2</div></div>
-    <div class="cons-pista" style="text-align:center;font-size:clamp(20px,2.4vw,28px);font-style:normal;padding:20px 0">\\(\\dfrac{x-1}{3}\\)</div>
+    <div class="cons-pista" style="text-align:center;font-size:clamp(28px,3.2vw,42px);font-style:normal;padding:20px 0">\\(\\dfrac{x-1}{3}\\)</div>
     <div class="cons-task">✏ Escribe la frase en tu cuaderno</div>
   </div>
   <div class="cons-card" style="border-left-color:var(--amber)">
     <div class="cons-head"><div class="cons-n" style="background:var(--amber)">3</div><div class="cons-title">Reto 3</div></div>
-    <div class="cons-pista" style="text-align:center;font-size:clamp(20px,2.4vw,28px);font-style:normal;padding:20px 0">\\(x^2 + x\\)</div>
+    <div class="cons-pista" style="text-align:center;font-size:clamp(28px,3.2vw,42px);font-style:normal;padding:20px 0">\\(x^2 + x\\)</div>
     <div class="cons-task">✏ Escribe la frase en tu cuaderno</div>
   </div>
   <div class="cons-card" style="border-left-color:var(--purple);border-left-width:8px">
     <div class="cons-head"><div class="cons-n" style="background:var(--purple)">★</div><div class="cons-title" style="color:var(--purple)">Variante</div></div>
-    <div class="cons-pista" style="text-align:center;font-size:clamp(20px,2.4vw,28px);font-style:normal;padding:20px 0">\\(2x + 3y\\)</div>
+    <div class="cons-pista" style="text-align:center;font-size:clamp(28px,3.2vw,42px);font-style:normal;padding:20px 0">\\(2x + 3y\\)</div>
     <div class="cons-task" style="color:var(--purple);background:#F3E5F5">✏ Dos variables: explica cada una</div>
   </div>
 </div>`});
@@ -887,23 +895,27 @@ clicks:0,html:`
 </div>
 <div class="soc-grid">
   <div class="soc-card vis" style="border-left-color:var(--blue-mid)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">\\(5x - 2\\)</div></div>
-    <div class="soc-pista" id="s20f1" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El quíntuple de un número, disminuido en dos."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--blue-mid)">1</div><div class="soc-title">Reto 1</div></div>
+    <div class="soc-fml">\\(5x - 2\\)</div>
+    <div class="soc-pista" id="s20f1" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"El quíntuple de un número, disminuido en dos."</div>
     <button class="sol-btn" style="border-color:var(--blue-mid);color:var(--blue-mid)" onclick="toggleSol('s20f1',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--teal)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">\\(\\dfrac{x-1}{3}\\)</div></div>
-    <div class="soc-pista" id="s20f2" style="display:none;font-size:clamp(17px,1.9vw,21px)">"La tercera parte de la diferencia entre un número y uno."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--teal)">2</div><div class="soc-title">Reto 2</div></div>
+    <div class="soc-fml">\\(\\dfrac{x-1}{3}\\)</div>
+    <div class="soc-pista" id="s20f2" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"La tercera parte de la diferencia entre un número y uno."</div>
     <button class="sol-btn" style="border-color:var(--teal);color:var(--teal)" onclick="toggleSol('s20f2',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--amber)">
-    <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">\\(x^2 + x\\)</div></div>
-    <div class="soc-pista" id="s20f3" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El cuadrado de un número, más el mismo número."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--amber)">3</div><div class="soc-title">Reto 3</div></div>
+    <div class="soc-fml">\\(x^2 + x\\)</div>
+    <div class="soc-pista" id="s20f3" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"El cuadrado de un número, más el mismo número."</div>
     <button class="sol-btn" style="border-color:var(--amber);color:var(--amber)" onclick="toggleSol('s20f3',this)">Ver solución</button>
   </div>
   <div class="soc-card vis" style="border-left-color:var(--purple);border-left-width:8px">
-    <div class="soc-head"><div class="soc-n" style="background:var(--purple)">★</div><div class="soc-title" style="color:var(--purple)">\\(2x + 3y\\)</div></div>
-    <div class="soc-pista" id="s20f4" style="display:none;font-size:clamp(17px,1.9vw,21px)">"El doble de un número, más el triple de otro."</div>
+    <div class="soc-head"><div class="soc-n" style="background:var(--purple)">★</div><div class="soc-title" style="color:var(--purple)">Variante</div></div>
+    <div class="soc-fml" style="border-color:var(--purple)">\\(2x + 3y\\)</div>
+    <div class="soc-pista" id="s20f4" style="display:none;font-size:clamp(22px,2.4vw,28px);font-style:italic">"El doble de un número, más el triple de otro."</div>
     <button class="sol-btn" style="border-color:var(--purple);color:var(--purple)" onclick="toggleSol('s20f4',this)">Ver solución</button>
   </div>
 </div>`});
@@ -1132,10 +1144,10 @@ onEnter:()=>{ trIdx=0; trAciertos=0; renderTraductor(); }});
 /* SLIDE 30 — TRANSICIÓN TÚ HACES S3 */
 SLIDES.push({cls:'s-trans',noH:true,noF:true,clicks:0,html:`
 <div style="display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
-  <div class="trans-big">TÚ HACES</div>
+  <div class="trans-big" style="font-size:clamp(120px,18vw,200px)">TÚ HACES</div>
   <div style="width:90px;height:2px;background:rgba(255,255,255,.2);border-radius:1px"></div>
-  <div class="trans-sub">Trabajo independiente — 10 minutos</div>
-  <div class="trans-note">Define cada variable. Justifica la elección de letra.</div>
+  <div class="trans-sub" style="font-size:clamp(40px,4.5vw,58px)">Trabajo independiente — 10 minutos</div>
+  <div class="trans-note" style="font-size:clamp(34px,3.8vw,48px)">Define cada variable. Justifica la elección de letra.</div>
 </div>`});
 
 /* SLIDE 31 — TÚ HACES CONSIGNA S3 */
@@ -1308,6 +1320,14 @@ document.addEventListener('keydown', e=>{
   }
   if(e.code === 'Space' || e.code === 'ArrowRight'){ e.preventDefault(); advance(); }
   if(e.code === 'ArrowLeft'){ e.preventDefault(); retreat(); }
+  if(e.code === 'KeyF'){
+    e.preventDefault();
+    if(!document.fullscreenElement){
+      document.documentElement.requestFullscreen().catch(()=>{});
+    } else {
+      document.exitFullscreen().catch(()=>{});
+    }
+  }
 });
 document.getElementById('bn').addEventListener('click', advance);
 document.getElementById('bp').addEventListener('click', retreat);
